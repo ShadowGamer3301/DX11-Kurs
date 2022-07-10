@@ -1,12 +1,18 @@
 #include <Windows.h>
+#include "loguru.hpp"
 
-int main(void)
+LRESULT WindowProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp);
+
+int main(int argc, char** argv)
 {
+	loguru::init(argc, argv);
+	loguru::add_file("Log.txt", loguru::Append, loguru::Verbosity_MAX);
+
 	//Stworzenie i zdefiniowanie klasy okna
 	WNDCLASSEX wcex = {};
 	wcex.cbSize = sizeof(WNDCLASSEX);
 	wcex.style = CS_HREDRAW | CS_VREDRAW;
-	wcex.lpfnWndProc = DefWindowProc;
+	wcex.lpfnWndProc = WindowProc;
 	wcex.cbClsExtra = 0;
 	wcex.cbWndExtra = 0;
 	wcex.hInstance = nullptr;
@@ -18,10 +24,20 @@ int main(void)
 	wcex.hIconSm = wcex.hIcon;
 
 	//Rejstracja klasy okna
-	RegisterClassEx(&wcex);
+	if (!RegisterClassEx(&wcex))
+	{
+		LOG_F(ERROR, "Failed to register window class");
+		return -1;
+	}
 	
 	//Swtórz okno
 	HWND wnd = CreateWindow(L"BaseWindow", L"Kurs DirectX", WS_OVERLAPPEDWINDOW, 0, 0, 1280, 720, nullptr, nullptr, nullptr, nullptr);
+	if (!wnd)
+	{
+		LOG_F(ERROR, "Failed to create window");
+		return -1;
+	}
+
 
 	//Poka¿ okno
 	ShowWindow(wnd, SW_SHOWDEFAULT);
@@ -37,5 +53,18 @@ int main(void)
 		}
 	}
 
-	return 0;
+	return msg.wParam;
+}
+
+LRESULT WindowProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
+{
+	switch (msg)
+	{
+	case WM_CLOSE:
+		PostQuitMessage(4);
+		break;
+	default:
+		return DefWindowProc(hWnd, msg, wp, lp);
+		break;
+	}
 }
