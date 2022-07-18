@@ -227,3 +227,57 @@ File verbosity level: 9
 date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
 2022-07-13 15:11:06.961 (   0.105s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'Log.txt', mode: 'a', verbosity: 9
 2022-07-13 15:11:28.037 (  21.182s) [main thread     ]             loguru.cpp:538   INFO| atexit
+
+
+
+
+
+arguments: Z:\\VS\ Repos\\DX11\ Kurs\\x64\\Debug\\DX11\ Kurs.exe
+Current dir: Z:\VS Repos\DX11 Kurs\DX11 Kurs
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-07-14 21:23:03.570 (   0.143s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'Log.txt', mode: 'a', verbosity: 9
+2022-07-14 21:23:29.056 (  25.629s) [main thread     ]             loguru.cpp:538   INFO| atexit
+
+
+
+
+
+arguments: Z:\\VS\ Repos\\DX11\ Kurs\\x64\\Debug\\DX11\ Kurs.exe
+Current dir: Z:\VS Repos\DX11 Kurs\DX11 Kurs
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-07-14 21:34:03.374 (   0.152s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'Log.txt', mode: 'a', verbosity: 9
+2022-07-14 21:34:08.062 (   4.840s) [main thread     ]             loguru.cpp:538   INFO| atexit
+
+
+
+
+
+arguments: Z:\\VS\ Repos\\DX11\ Kurs\\x64\\Debug\\DX11\ Kurs.exe
+Current dir: Z:\VS Repos\DX11 Kurs\DX11 Kurs
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-07-18 13:34:32.154 (   0.059s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'Log.txt', mode: 'a', verbosity: 9
+2022-07-18 13:34:36.215 (   4.120s) [main thread     ]             loguru.cpp:538   INFO| atexit
+
+
+
+
+
+arguments: Z:\\VS\ Repos\\DX11\ Kurs\\x64\\Debug\\DX11\ Kurs.exe
+Current dir: Z:\VS Repos\DX11 Kurs\DX11 Kurs
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-07-18 13:34:39.344 (   0.104s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'Log.txt', mode: 'a', verbosity: 9
+
+
+
+
+
+arguments: Z:\\VS\ Repos\\DX11\ Kurs\\x64\\Debug\\DX11\ Kurs.exe
+Current dir: Z:\VS Repos\DX11 Kurs\DX11 Kurs
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-07-18 13:45:20.009 (   0.108s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'Log.txt', mode: 'a', verbosity: 9
+2022-07-18 13:45:25.147 (   5.246s) [main thread     ]             loguru.cpp:538   INFO| atexit
