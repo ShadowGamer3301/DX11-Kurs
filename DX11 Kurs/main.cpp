@@ -1,5 +1,6 @@
 #include "Window.h"
 #include "loguru.hpp"
+#include "DxBase.h"
 
 int main(int argc, char** argv)
 {
@@ -9,6 +10,7 @@ int main(int argc, char** argv)
 		loguru::add_file("Log.txt", loguru::Append, loguru::Verbosity_MAX);
 
 		Window wnd;
+		DxBase gfx(wnd.GetWindowHandler());
 
 		MSG msg = {};
 
@@ -19,6 +21,8 @@ int main(int argc, char** argv)
 				TranslateMessage(&msg);
 				DispatchMessage(&msg);
 			}
+
+			gfx.Render(0, 0.4, 0.7, 1.0);
 		}
 
 		return msg.wParam;

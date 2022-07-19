@@ -3,7 +3,6 @@
 #include "ini.h"
 #include <string>
 #include <sstream>
-#include <D3DX11.h>
 
 Window::Window()
 {

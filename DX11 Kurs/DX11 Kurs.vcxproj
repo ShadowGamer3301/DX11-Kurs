@@ -155,11 +155,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DxBase.cpp" />
     <ClCompile Include="loguru.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DxBase.h" />
     <ClInclude Include="ini.h" />
     <ClInclude Include="loguru.hpp" />
     <ClInclude Include="Window.h" />
